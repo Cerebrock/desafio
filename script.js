@@ -144,6 +144,7 @@ function displayResult() {
 
   resultDiv.style.display = "block";
 }
+
 window.onload = () => {
   document.getElementById("next-btn").style.display = "none";
   document.getElementById("result").style.display = "none";
