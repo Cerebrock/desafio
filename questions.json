@@ -60,14 +60,13 @@
     "correct": "Sesgo de confirmación"
   },
   {
-    "question": "¿Qué sesgo cognitivo describe la tendencia a recordar mejor la primera y última parte de una lista o secuencia, mientras que la parte media se recuerda peor?",
+    "question": "¿Qué sesgos cognitivos describen la tendencia a recordar mejor la primera y última parte de una lista o secuencia?",
     "options": [
-      "Sesgo de recencia",
-      "Efecto de posición serial",
-      "Sesgo de anclaje",
-      "Efecto de primacía"
+      "Sesgo de recencia y primacia",
+      "Inercia de cadenas",
+      "Sesgo de anclaje"
     ],
-    "correct": "Efecto de posición serial"
+    "correct": "Sesgo de recencia y primacia"
   },
   {
     "question": "¿Qué sesgo se refiere a la tendencia de las personas a sobreestimar su capacidad en áreas donde son incompetentes, mientras subestiman su competencia en áreas donde son expertas?",
