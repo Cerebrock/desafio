@@ -5,10 +5,11 @@ html {
   background: linear-gradient(to right, #cea6ff 0%, #fcb69f 100%);
   font-family: "Montserrat", sans-serif;
   display: flex;
-  font-size: 17pt;
+  font-size: 18pt;
   flex-direction: column; /* Set the main axis to vertical */
   min-height: 100vh; /* Ensure the body takes at least the viewport height */
 }
+
 p {
   padding: 5px;
 }
@@ -84,7 +85,7 @@ h1 {
 #welcome-screen {
   background-color: #f1e6ff;
   border-radius: 8px;
-  padding: 20px;
+  padding: 40px;
   color: #313131;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   margin: 10px auto;
@@ -95,12 +96,16 @@ h1 {
 }
 input[type="text"],
 input[type="email"] {
+  font-size: 0.8em;
   padding: 10px; /* Adjust the value as needed */
   margin: 5px 0; /* Optional: Adds space around the input field */
   border-radius: 5px; /* Optional: Rounds the corners of the input field */
   border: 1px solid #ccc; /* Optional: Adds a border to the input field */
 }
 
+button {
+  font-size: 0.8em;
+}
 #next-btn,
 #welcome-screen button {
   background-color: #8662b3;
@@ -119,6 +124,9 @@ input[type="email"] {
   background-color: #e5891f;
 }
 
+#next-brn {
+  font-size: larger;
+}
 #progress-bar {
   background-color: #ddd;
   border-radius: 20px;
@@ -162,12 +170,11 @@ input[type="email"] {
 }
 
 .redirect-button {
-  background-color: #cea6ff;
-  color: #ffffff;
+  background-color: #31313175;
+  color: #ff9b26;
   border: none;
-  padding: 10px 20px;
+  padding: 10px 10px;
   border-radius: 8px;
-  border: 1px solid #ff9b26; /* Corrected border property */
   font-weight: bold;
   margin-top: 20px;
   cursor: pointer;
@@ -175,10 +182,11 @@ input[type="email"] {
   margin-left: auto;
   margin-right: auto;
   width: 50%; /* Adjust width as needed */
+  font-size: 22px;
 }
 
 .redirect-button:hover {
-  background-color: #e5891f;
+  background-color: #313131;
 }
 
 @media (max-width: 768px) {
@@ -189,7 +197,7 @@ input[type="email"] {
 
   .logo {
     order: 3; /* Move logo below the quiz container */
-    width: 80px; /* Further reduce logo size for smaller screens */
+    width: smaller; /* Further reduce logo size for smaller screens */
     margin: 0px; /* Center logo with automatic margins */
   }
 
@@ -199,8 +207,8 @@ input[type="email"] {
   }
 
   .quiz-container {
-    width: 80%; /* Use full width for container */
-    padding: 10px; /* Reduce padding */
+    width: 82%; /* Use full width for container */
+    padding: 00px; /* Reduce padding */
   }
 
   .quiz-content {
@@ -228,7 +236,9 @@ input[type="email"] {
     width: auto; /* Auto width for buttons */
     padding: 8px 15px; /* Adjust padding for buttons */
   }
-
+  #next-brn {
+    font-size: larger;
+  }
   footer {
     position: static; /* Ensure footer is at the bottom */
     padding: 15px 5px; /* Adjust padding */
@@ -255,17 +265,18 @@ input[type="email"] {
   .redirect-button {
     width: 80%; /* Larger button for smaller screens */
     padding: 15px; /* Larger padding for easier touch */
-    background-color: #cea6ff;
-    color: #ffffff;
+    background-color: #31313175;
+    text-align: center;
+    color: #ff9b26;
     border: none;
-    padding: 10px 20px;
     border-radius: 8px;
     font-weight: bold;
-    margin-top: 20px;
+    font-size: 22px;
+
+    padding-left: 10px;
     border: 1px solid #ff9b26; /* Corrected border property */
     cursor: pointer;
     display: block; /* Center the button */
-    width: 50%; /* Adjust width as needed */
   }
 }
 

@@ -92,7 +92,7 @@ function displayQuestion(index) {
         .join("<br>");
     quizContainer.appendChild(questionDiv);
     document.getElementById("next-btn").textContent =
-      index === questions.length - 1 ? "Enviar" : "Siguiente";
+      index === questions.length - 1 ? "ENVIAR" : "SIGUIENTE";
     const progressPercent = ((index + 1) / questions.length) * 100;
     progressBar.style.width = progressPercent + "%";
   } else {
