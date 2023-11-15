@@ -110,7 +110,7 @@
     "correct": "Lleva primero la cabra, regresa, lleva el lobo, trae de vuelta a la cabra, lleva la col, y finalmente regresa por la cabra."
   },
   {
-    "question": "¿Cuál de las siguientes opciones describe mejor la descomposición en el pensamiento computacional?",
+    "question": "¿Cuál de las siguientes opciones describe mejor la descomposición?",
     "options": [
       "Resolver problemas complejos dividiéndolos en problemas más pequeños y manejables.",
       "Repetir un conjunto de instrucciones hasta que se cumpla una condición específica.",
@@ -120,7 +120,7 @@
     "correct": "Resolver problemas complejos dividiéndolos en problemas más pequeños y manejables."
   },
   {
-    "question": "En la programación, ¿qué representa mejor el concepto de 'abstracción'?",
+    "question": "En computación, ¿qué representa mejor el concepto de 'abstracción'?",
     "options": [
       "Escribir código que puede ser reutilizado en diferentes partes de un programa.",
       "Identificar y extraer las características esenciales de un objeto o problema.",
@@ -128,15 +128,5 @@
       "Organizar datos en estructuras como listas, pilas o colas."
     ],
     "correct": "Identificar y extraer las características esenciales de un objeto o problema."
-  },
-  {
-    "question": "¿Qué principio del pensamiento computacional se enfoca en la creación de soluciones que se aplican a múltiples problemas y situaciones?",
-    "options": [
-      "Descomposición",
-      "Reconocimiento de patrones",
-      "Abstracción",
-      "Algoritmos"
-    ],
-    "correct": "Abstracción"
   }
 ]
