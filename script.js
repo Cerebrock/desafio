@@ -65,10 +65,26 @@ let userEmail = "";
 function startQuiz() {
   userName = document.getElementById("name").value;
   userEmail = document.getElementById("email").value;
-  document.getElementById("welcome-screen").style.display = "none";
-  document.getElementById("quiz").style.display = "block";
-  displayQuestion(currentQuestionIndex);
-  document.getElementById("next-btn").style.display = "block";
+
+  if (
+    !validation.isNameValid ||
+    !validation.isEmailValid ||
+  ) {
+    // Prevent form submission
+    event.preventDefault();
+
+    // Display error messages accordingly
+    if (!validation.isNameValid) {
+      alert("Ingrese su nombre.");
+    } else if (!validation.isEmailValid) {
+      alert("Dirección de correo inválida.");
+    }
+  } else {
+    document.getElementById("welcome-screen").style.display = "none";
+    document.getElementById("quiz").style.display = "block";
+    displayQuestion(currentQuestionIndex);
+    document.getElementById("next-btn").style.display = "block";
+  }
 }
 
 function displayQuestion(index) {
@@ -174,4 +190,21 @@ function sendData() {
     .then((response) => response.json())
     .then((data) => console.log(data))
     .catch((error) => console.error("Error:", error));
+}
+
+function validateData(name, email, number, selectedIds) {
+  const nameRegex = /^.{5,}$/;
+  const isNameValid = name && nameRegex.test(name.trim());
+
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  const isEmailValid = email && emailRegex.test(email.trim());
+
+  // Check if the selectedIds array is not empty
+  const isSelectedIdsNotEmpty =
+    selectedIds && Array.isArray(selectedIds) && selectedIds.length > 0;
+
+  return {
+    isNameValid: isNameValid,
+    isEmailValid: isEmailValid,
+  };
 }
