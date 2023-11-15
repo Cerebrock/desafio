@@ -184,6 +184,9 @@ button {
   width: 50%; /* Adjust width as needed */
   font-size: 22px;
 }
+#welcome-message {
+  margin: 15px;
+}
 
 .redirect-button:hover {
   background-color: #313131;
