@@ -139,13 +139,14 @@ button {
 
 .coupon {
   padding: 15px;
-  font-size: larger;
+  font-size: 1.5em;
   border: 3px solid #ff9b26; /* Corrected border property */
   border-radius: 20px;
   width: 90%;
   margin: auto; /* Center the coupon div */
   text-align: center; /* Center the text inside the coupon div */
   font-weight: bold;
+  margin-bottom: 10px;
 }
 
 #progress {

@@ -68,10 +68,11 @@ function submitAnswer() {
 }
 function displayResult() {
   const resultDiv = document.getElementById("result");
+  const seeMoreButton = document.getElementById("see-more-btn"); // Ensure you have the correct ID for your redirect button
   const redirectButton = document.getElementById("redirect-button"); // Ensure you have the correct ID for your redirect button
   const totalQuestions = questions.length;
   const threshold = Math.ceil(totalQuestions * 0.6);
-  const successMessage = `<b>¡Felicitaciones!</b></br></br>Tu puntaje fue de ${score}/${totalQuestions}</br></br>Tu cupón es </br><br>`;
+  const successMessage = `<b>¡Felicitaciones!</b></br></br>Tu puntaje fue de ${score}/${totalQuestions}</br></br><b>Tu cupón es </b></br><br>`;
   const failureMessage = `Tu puntaje fue de ${score} sobre ${totalQuestions} correctas.</br></br>Podés intentarlo de nuevo.`;
   const couponCode = "D-SAFIA-T"; // Example coupon code
 
@@ -79,14 +80,14 @@ function displayResult() {
     resultDiv.innerHTML = `<div class="winner-message">
                              ${successMessage}
                              <div class="coupon">${couponCode}</div>
-                             <p>¡Podés usarlo para aplicar a la membresía o cualquiera de nuestros cursos con un <b>40% de descuento!</b></div>                             
+                             <p style='text-align:center;'>¡Podés usarlo para aplicar a la membresía o cualquiera de nuestros cursos con un <b>40% de descuento!</b></div>                             
                            </div>`;
     redirectButton.style.display = "block"; // Show the redirect button only if score is above threshold
   } else {
     resultDiv.innerHTML = `<div class="failure-message">${failureMessage}</div>`;
     redirectButton.style.display = "none"; // Hide the redirect button
   }
-
+  seeMoreButton.style.display = "block";
   resultDiv.style.display = "block";
 }
 
