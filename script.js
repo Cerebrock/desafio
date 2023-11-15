@@ -111,20 +111,28 @@ function submitAnswer() {
   currentQuestionIndex++;
   displayQuestion(currentQuestionIndex);
 }
-
 function displayResult() {
   const resultDiv = document.getElementById("result");
+  const redirectButton = document.getElementById("redirectButton");
   const totalQuestions = questions.length;
   const threshold = Math.ceil(totalQuestions * 0.8);
-  const successMessage = `Felicitaciones! Sacaste ${score}/${totalQuestions}`;
-  const failureMessage = `Tu puntaje fue de ${score} sobre ${totalQuestions} correctas.`;
+  const successMessage = `<b>¡Felicitaciones!</b></br>Tu puntaje fue de ${score}/${totalQuestions}</br>Tu cupón es </br><br>`;
+  const failureMessage = `Tu puntaje fue de ${score} sobre ${totalQuestions} correctas.</br></br>Podés intentarlo de nuevo.`;
+  const couponCode = "D-SAFIA-T"; // Example coupon code
+
   resultDiv.innerHTML =
     score >= threshold
-      ? `<div class="winner-message">${successMessage}</div>`
+      ? `<div class="winner-message">
+           ${successMessage}
+           <div class="coupon">${couponCode}</div>
+         </div>`
       : `<div class="failure-message">${failureMessage}</div>`;
+
+  // Show the redirect button
+  redirectButton.style.display = "block";
+
   resultDiv.style.display = "block";
 }
-
 window.onload = () => {
   document.getElementById("next-btn").style.display = "none";
   document.getElementById("result").style.display = "none";

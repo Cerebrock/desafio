@@ -129,6 +129,17 @@ input[type="email"] {
   overflow: hidden;
 }
 
+.coupon {
+  padding: 15px;
+  font-size: larger;
+  border: 3px solid #ff9b26; /* Corrected border property */
+  border-radius: 20px;
+  width: 90%;
+  margin: auto; /* Center the coupon div */
+  text-align: center; /* Center the text inside the coupon div */
+  font-weight: bold;
+}
+
 #progress {
   background-color: #ff9b26;
   height: 100%;
@@ -149,6 +160,27 @@ input[type="email"] {
 .rotating {
   animation: rotateAnimation 1s ease-in-out 1; /* Adjust duration and timing function as needed */
 }
+
+.redirect-button {
+  background-color: #cea6ff;
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: 1px solid #ff9b26; /* Corrected border property */
+  font-weight: bold;
+  margin-top: 20px;
+  cursor: pointer;
+  display: block; /* Center the button */
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%; /* Adjust width as needed */
+}
+
+.redirect-button:hover {
+  background-color: #e5891f;
+}
+
 @media (max-width: 768px) {
   h1 {
     font-size: 1.5em; /* Reduce font size for smaller screens */
@@ -219,6 +251,21 @@ input[type="email"] {
   /* Animation adjustments if needed */
   .rotating {
     animation: rotateAnimation 0.5s ease-in-out 1; /* Faster rotation for mobile */
+  }
+  .redirect-button {
+    width: 80%; /* Larger button for smaller screens */
+    padding: 15px; /* Larger padding for easier touch */
+    background-color: #cea6ff;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: bold;
+    margin-top: 20px;
+    border: 1px solid #ff9b26; /* Corrected border property */
+    cursor: pointer;
+    display: block; /* Center the button */
+    width: 50%; /* Adjust width as needed */
   }
 }
 
