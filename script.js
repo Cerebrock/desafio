@@ -1,61 +1,4 @@
-const questions = [
-  {
-    question:
-      "¿Qué aspecto de la cognición es más análogo a la Unidad Central de Procesamiento (CPU) de una computadora?",
-    options: [
-      "Almacenamiento de memoria a largo plazo",
-      "Procesamiento de entrada sensorial",
-      "Memoria a corto plazo (de trabajo)",
-      "Respuesta emocional",
-    ],
-    correct: "Memoria a corto plazo (de trabajo)",
-  },
-  {
-    question:
-      "En el contexto del aprendizaje y la memoria, ¿qué componente de la computadora se compara mejor con la memoria a largo plazo humana?",
-    options: [
-      "RAM (Memoria de Acceso Aleatorio)",
-      "Almacenamiento en Disco Duro",
-      "Unidad de Procesamiento Gráfico (GPU)",
-      "Placa base",
-    ],
-    correct: "Almacenamiento en Disco Duro",
-  },
-  {
-    question:
-      "¿Qué proceso en la cognición humana es similar al algoritmo de una computadora en la resolución de problemas?",
-    options: [
-      "Soñar durante el sueño",
-      "Experimentar emociones",
-      "Aplicar heurísticas",
-      "Percepción sensorial",
-    ],
-    correct: "Aplicar heurísticas",
-  },
-  {
-    question:
-      "En términos de adaptabilidad y aprendizaje, ¿cómo difiere significativamente la cognición humana de los modelos computacionales actuales?",
-    options: [
-      "Los humanos dependen únicamente de información preprogramada",
-      "Los humanos no pueden procesar información tan rápido como las computadoras",
-      "Los humanos pueden aprender de datos y experiencias no estructuradas",
-      "Las computadoras pueden desarrollar emociones de manera independiente",
-    ],
-    correct:
-      "Los humanos pueden aprender de datos y experiencias no estructuradas",
-  },
-  {
-    question:
-      "¿Cuál es el equivalente de la 'secuencia de arranque' de una computadora en la cognición humana?",
-    options: [
-      "El proceso de envejecimiento",
-      "Despertar del sueño",
-      "Recuerdo de memoria a largo plazo",
-      "Adaptación sensorial",
-    ],
-    correct: "Despertar del sueño",
-  },
-];
+const nQuestions = 10;
 let currentQuestionIndex = 0;
 let score = 0;
 let userName = "";
@@ -127,7 +70,7 @@ function displayResult() {
   const resultDiv = document.getElementById("result");
   const redirectButton = document.getElementById("redirect-button"); // Ensure you have the correct ID for your redirect button
   const totalQuestions = questions.length;
-  const threshold = Math.ceil(totalQuestions * 0.8);
+  const threshold = Math.ceil(totalQuestions * 0.6);
   const successMessage = `<b>¡Felicitaciones!</b></br>Tu puntaje fue de ${score}/${totalQuestions}</br>Tu cupón es </br><br>`;
   const failureMessage = `Tu puntaje fue de ${score} sobre ${totalQuestions} correctas.</br></br>Podés intentarlo de nuevo.`;
   const couponCode = "D-SAFIA-T"; // Example coupon code
@@ -150,6 +93,7 @@ window.onload = () => {
   document.getElementById("next-btn").style.display = "none";
   document.getElementById("result").style.display = "none";
   document.getElementById("progress-bar").style.display = "block";
+  loadQuestions(nQuestions);
 };
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -201,4 +145,21 @@ function validateData(name, email) {
     isNameValid: isNameValid,
     isEmailValid: isEmailValid,
   };
+}
+let questions = [];
+
+function loadQuestions(N) {
+  fetch("questions.json")
+    .then((response) => response.json())
+    .then((data) => {
+      if (data.length > N) {
+        // Shuffle the array and then slice it to get N random questions
+        questions = data.sort(() => 0.5 - Math.random()).slice(0, N);
+      } else {
+        // If N is greater than the number of questions available, use all questions
+        questions = data;
+      }
+      // Now you can start your quiz with the randomly selected questions
+    })
+    .catch((error) => console.error("Error loading questions:", error));
 }
