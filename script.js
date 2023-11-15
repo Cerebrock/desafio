@@ -10,7 +10,6 @@ const questions = [
     ],
     correct: "Memoria a corto plazo (de trabajo)",
   },
-  /*
   {
     question:
       "En el contexto del aprendizaje y la memoria, ¿qué componente de la computadora se compara mejor con la memoria a largo plazo humana?",
@@ -55,7 +54,7 @@ const questions = [
       "Adaptación sensorial",
     ],
     correct: "Despertar del sueño",
-  },*/
+  },
 ];
 let currentQuestionIndex = 0;
 let score = 0;
@@ -125,23 +124,23 @@ function submitAnswer() {
 }
 function displayResult() {
   const resultDiv = document.getElementById("result");
-  const redirectButton = document.getElementById("redirectButton");
+  const redirectButton = document.getElementById("redirect-button"); // Ensure you have the correct ID for your redirect button
   const totalQuestions = questions.length;
   const threshold = Math.ceil(totalQuestions * 0.8);
   const successMessage = `<b>¡Felicitaciones!</b></br>Tu puntaje fue de ${score}/${totalQuestions}</br>Tu cupón es </br><br>`;
   const failureMessage = `Tu puntaje fue de ${score} sobre ${totalQuestions} correctas.</br></br>Podés intentarlo de nuevo.`;
   const couponCode = "D-SAFIA-T"; // Example coupon code
 
-  resultDiv.innerHTML =
-    score >= threshold
-      ? `<div class="winner-message">
-           ${successMessage}
-           <div class="coupon">${couponCode}</div>
-         </div>`
-      : `<div class="failure-message">${failureMessage}</div>`;
-
-  // Show the redirect button
-  redirectButton.style.display = "block";
+  if (score >= threshold) {
+    resultDiv.innerHTML = `<div class="winner-message">
+                             ${successMessage}
+                             <div class="coupon">${couponCode}</div>
+                           </div>`;
+    redirectButton.style.display = "block"; // Show the redirect button only if score is above threshold
+  } else {
+    resultDiv.innerHTML = `<div class="failure-message">${failureMessage}</div>`;
+    redirectButton.style.display = "none"; // Hide the redirect button
+  }
 
   resultDiv.style.display = "block";
 }
@@ -173,6 +172,7 @@ const BACKEND_URL =
 function sendData() {
   const name = document.getElementById("name").value;
   const email = document.getElementById("email").value;
+  const timestamp = new Date().toISOString(); // Get current timestamp in ISO format
 
   fetch(BACKEND_URL, {
     method: "POST",
@@ -181,6 +181,7 @@ function sendData() {
       name,
       email,
       score,
+      timestamp, // Include timestamp in the data sent
     }),
   })
     .then((response) => response.json())
@@ -189,7 +190,7 @@ function sendData() {
 }
 
 function validateData(name, email) {
-  const nameRegex = /^.{5,}$/;
+  const nameRegex = /^.{3,}$/;
   const isNameValid = name && nameRegex.test(name.trim());
 
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
