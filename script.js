@@ -79,7 +79,7 @@ function displayResult() {
     resultDiv.innerHTML = `<div class="winner-message">
                              ${successMessage}
                              <div class="coupon">${couponCode}</div>
-                             <p>Podés usarlo para aplicar a la membresía o cualquiera de nuestros cursos con un <b>40% de descuento!</b></div>                             
+                             <p>¡Podés usarlo para aplicar a la membresía o cualquiera de nuestros cursos con un <b>40% de descuento!</b></div>                             
                            </div>`;
     redirectButton.style.display = "block"; // Show the redirect button only if score is above threshold
   } else {
