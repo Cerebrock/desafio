@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Desafio</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="main-content">
+      <header>
+        <a href="https://humai.com.ar">
+          <img src="logo.png" alt="Humai Logo" class="logo" id="logo" />
+        </a>
+      </header>
+      <div class="quiz-container">
+        <div class="quiz-content">
+          <h1>Desafío Meta<span class="alttext">Inteligencia</span></h1>
+          <div id="welcome-screen">
+            <input type="text" id="name" placeholder="Nombre Completo" />
+            <input type="email" id="email" placeholder="E-mail" />
+            <button onclick="startQuiz()">COMENZAR</button>
+          </div>
+          <div id="quiz"></div>
+          <div id="question-container"></div>
+          <button id="next-btn" onclick="submitAnswer()">CONTINUAR</button>
+          <div id="result" class="mycard"></div>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <div id="progress-bar">
+        <div id="progress"></div>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
