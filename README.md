@@ -1,0 +1,2 @@
+- Mejorar preguntas
+- Agregar pixel

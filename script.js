@@ -75,6 +75,7 @@ function startQuiz() {
     return false;
   } else {
     document.getElementById("welcome-screen").style.display = "none";
+    document.getElementById("welcome-message").style.display = "none";
     document.getElementById("quiz").style.display = "block";
     displayQuestion(currentQuestionIndex);
     document.getElementById("next-btn").style.display = "block";
