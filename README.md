@@ -1,2 +1,5 @@
 - Mejorar preguntas
 - Agregar pixel
+- Podría mandarte el cupón por mail fácilmente
+- Agregar redes
+- Sumarte a discord?
