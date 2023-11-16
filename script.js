@@ -93,8 +93,8 @@ function displayResult() {
   const redirectButton = document.getElementById("redirect-button"); // Ensure you have the correct ID for your redirect button
   const totalQuestions = questions.length;
   const threshold = Math.ceil(totalQuestions * 0.6);
-  const successMessage = `<b>¡Felicitaciones!</b></br></br>Tu puntaje fue de ${score}/${totalQuestions}</br></br><b>Tu cupón es </b></br><br>`;
-  const failureMessage = `Tu puntaje fue de ${score} sobre ${totalQuestions} correctas.</br></br>Podés intentarlo de nuevo.`;
+  const successMessage = `<b>¡Felicitaciones!</b></br></br>Tu puntaje fue de <b>${score}/${totalQuestions}</b></br></br><b>Tu cupón es </b></br><br>`;
+  const failureMessage = `Tu puntaje fue de ${score} sobre ${totalQuestions} correctas.</br></br>Intentalo nuevamente`;
   const couponCode = "D-SAFIA-T"; // Example coupon code
 
   if (score >= threshold) {
