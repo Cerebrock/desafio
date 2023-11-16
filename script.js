@@ -52,7 +52,7 @@ function displayQuestion(index) {
     });
 
     quizContainer.appendChild(questionDiv);
-    const progressPercent = ((index + 1) / questions.length) * 100;
+    const progressPercent = (index / questions.length) * 100;
     progressBar.style.width = progressPercent + "%";
   } else {
     quizContainer.style.display = "none";
