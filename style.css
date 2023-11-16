@@ -10,6 +10,23 @@ html {
   min-height: 100vh; /* Ensure the body takes at least the viewport height */
 }
 
+button {
+  background-color: #8662b3; /* Theme color */
+  color: #ffffff;
+  border: none;
+  padding: 10px 30px;
+  border-radius: 8px;
+  margin: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 10px; /* Space between buttons */
+  transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+button:hover {
+  background-color: #e5891f; /* Hover effect color */
+}
+
 p {
   padding: 5px;
 }
@@ -194,6 +211,11 @@ button {
 }
 
 @media (max-width: 768px) {
+  button {
+    width: 100%; /* Full width for easier touch */
+    padding: 12px 0; /* Larger padding for easier touch */
+    font-size: 1em; /* Larger font size for readability */
+  }
   h1 {
     font-size: 1.5em; /* Reduce font size for smaller screens */
     padding: 0 10px; /* Add padding to prevent text touching the edges */

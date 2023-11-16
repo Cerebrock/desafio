@@ -21,7 +21,6 @@ function startQuiz() {
     document.getElementById("welcome-message").style.display = "none";
     document.getElementById("quiz").style.display = "block";
     displayQuestion(currentQuestionIndex);
-    document.getElementById("next-btn").style.display = "block";
     return true;
   }
 }
@@ -35,37 +34,51 @@ function displayQuestion(index) {
     const q = questions[index];
     const questionDiv = document.createElement("div");
     questionDiv.className = "mycard question";
-    questionDiv.innerHTML =
-      `<p>${q.question}</p>` +
-      q.options
-        .map(
-          (option) =>
-            `<label>
-                  <input type="radio" name="question" value="${option}"> ${option}
-              </label>`
-        )
-        .join("<br>");
+    questionDiv.innerHTML = `<p>${q.question}</p>`;
+
+    q.options.forEach((option) => {
+      const answerButton = document.createElement("button");
+      answerButton.textContent = option;
+      answerButton.onclick = () => answerQuestion(option);
+      questionDiv.appendChild(answerButton);
+    });
+
     quizContainer.appendChild(questionDiv);
-    document.getElementById("next-btn").textContent =
-      index === questions.length - 1 ? "ENVIAR" : "SIGUIENTE";
     const progressPercent = ((index + 1) / questions.length) * 100;
     progressBar.style.width = progressPercent + "%";
   } else {
-    document.getElementById("next-btn").style.display = "none";
+    quizContainer.style.display = "none";
     progressBar.parentElement.style.display = "none";
     displayResult();
     sendData();
   }
+  // Select all buttons
+  var buttons = document.querySelectorAll("button");
+
+  // Loop through each button
+  buttons.forEach(function (button) {
+    button.addEventListener("click", function () {
+      var logo = document.getElementById("logo");
+      if (logo) {
+        logo.classList.add("rotating");
+
+        // Attach animationend event listener to the logo
+        logo.addEventListener("animationend", function () {
+          logo.classList.remove("rotating");
+        });
+      }
+    });
+  });
 }
 
-function submitAnswer() {
-  const selected = document.querySelector(`input[name="question"]:checked`);
-  if (selected && selected.value === questions[currentQuestionIndex].correct) {
+function answerQuestion(selectedOption) {
+  if (selectedOption === questions[currentQuestionIndex].correct) {
     score++;
   }
   currentQuestionIndex++;
   displayQuestion(currentQuestionIndex);
 }
+
 function displayResult() {
   const resultDiv = document.getElementById("result");
   const seeMoreButton = document.getElementById("see-more-btn"); // Ensure you have the correct ID for your redirect button
@@ -92,27 +105,10 @@ function displayResult() {
 }
 
 window.onload = () => {
-  document.getElementById("next-btn").style.display = "none";
   document.getElementById("result").style.display = "none";
   document.getElementById("progress-bar").style.display = "block";
   loadQuestions(nQuestions);
 };
-
-document.addEventListener("DOMContentLoaded", function () {
-  var button = document.getElementById("next-btn");
-  if (button) {
-    button.addEventListener("click", function () {
-      var logo = document.getElementById("logo");
-      if (logo) {
-        logo.classList.add("rotating");
-
-        logo.addEventListener("animationend", function () {
-          logo.classList.remove("rotating");
-        });
-      }
-    });
-  }
-});
 
 const BACKEND_URL =
   "https://script.google.com/macros/s/AKfycbyQT-6glmz951i4jGUH_IgyZSbS-uUt7nuXO5m5mlf3d6vDh-v-C_K3Nvp0bvWri5Xj/exec";
