@@ -2,7 +2,4 @@
 - Mejorar preguntas
 - Agregar pixel
 - Podría mandarte el cupón por mail fácilmente
-- Agregar redes
-- Sumarte a discord?
-- leer mail de url para otros usos?
-- ponerlo en el campus como iframe
+- Agregar redes, invitar a discord?

@@ -1,4 +1,4 @@
-const nQuestions = 3;
+const nQuestions = 5;
 let currentQuestionIndex = 0;
 let score = 0;
 let userName = "";

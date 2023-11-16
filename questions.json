@@ -1,5 +1,20 @@
 [
   {
+    "question": "En la computación, un 'bit' es la unidad más pequeña de información, que puede ser verdadero o falso.",
+    "options": ["VERDADERO", "FALSO"],
+    "correct": "VERDADERO"
+  },
+  {
+    "question": "El término 'inteligencia artificial' se refiere exclusivamente a robots con forma humana.",
+    "options": ["VERDADERO", "FALSO"],
+    "correct": "FALSO"
+  },
+  {
+    "question": "Un algoritmo es un conjunto de instrucciones diseñado para realizar una tarea específica.",
+    "options": ["VERDADERO", "FALSO"],
+    "correct": "VERDADERO"
+  },
+  {
     "question": "En el contexto del aprendizaje y la memoria, la RAM (Memoria de Acceso Aleatorio) se compara mejor con la memoria a largo plazo humana.",
     "options": ["VERDADERO", "FALSO"],
     "correct": "FALSO"
@@ -61,11 +76,6 @@
   },
   {
     "question": "Las emociones humanas pueden ser completamente entendidas y replicadas por las computadoras.",
-    "options": ["VERDADERO", "FALSO"],
-    "correct": "FALSO"
-  },
-  {
-    "question": "Una computadora puede ser creativa de la misma manera que un ser humano.",
     "options": ["VERDADERO", "FALSO"],
     "correct": "FALSO"
   },
