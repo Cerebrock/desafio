@@ -40,6 +40,14 @@ function displayQuestion(index) {
       const answerButton = document.createElement("button");
       answerButton.textContent = option;
       answerButton.onclick = () => answerQuestion(option);
+
+      // Apply color based on button text
+      if (option === "VERDADERO") {
+        answerButton.style.backgroundColor = "green";
+      } else if (option === "FALSO") {
+        answerButton.style.backgroundColor = "red";
+      }
+
       questionDiv.appendChild(answerButton);
     });
 
