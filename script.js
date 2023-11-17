@@ -1,8 +1,10 @@
-const nQuestions = 1;
+const nQuestions = 5;
 let currentQuestionIndex = 0;
 let score = 0;
 let userName = "";
 let userEmail = "";
+
+document.getElementById("n-questions").innerHTML = nQuestions + " preguntas";
 
 function startQuiz() {
   userName = document.getElementById("name").value;
