@@ -30,11 +30,6 @@
     "correct": "FALSO"
   },
   {
-    "question": "Las computadoras pueden aprender y adaptarse de la misma manera que lo hace un cerebro humano.",
-    "options": ["VERDADERO", "FALSO"],
-    "correct": "FALSO"
-  },
-  {
     "question": "Los seres humanos en general usan menos del 10% de su cerebro.",
     "options": ["VERDADERO", "FALSO"],
     "correct": "FALSO"
@@ -81,7 +76,7 @@
   },
   {
     "question": "Lanzas una moneda tres veces. ¿Cuál es la probabilidad de obtener exactamente dos caras?",
-    "options": ["1/4", "3/8", "1/2", "3/4"],
+    "options": ["1/4", "1/2", "3/8", "3/4"],
     "answer": "3/8"
   },
   {

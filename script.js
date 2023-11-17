@@ -19,6 +19,8 @@ function startQuiz() {
     }
     return false;
   } else {
+    localStorage.setItem("userName", userName);
+    localStorage.setItem("userEmail", userEmail);
     document.getElementById("welcome-screen").style.display = "none";
     document.getElementById("welcome-message").style.display = "none";
     document.getElementById("quiz").style.display = "block";
@@ -122,6 +124,12 @@ window.onload = () => {
   document.getElementById("result").style.display = "none";
   document.getElementById("progress-bar").style.display = "block";
   loadQuestions(nQuestions);
+  if (localStorage.getItem("userName")) {
+    document.getElementById("name").value = localStorage.getItem("userName");
+  }
+  if (localStorage.getItem("userEmail")) {
+    document.getElementById("email").value = localStorage.getItem("userEmail");
+  }
 };
 
 const BACKEND_URL =
