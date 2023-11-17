@@ -82,11 +82,15 @@ function displayQuestion(index) {
 }
 
 function answerQuestion(selectedOption) {
-  if (selectedOption === questions[currentQuestionIndex].correct) {
+  const isCorrect = selectedOption === questions[currentQuestionIndex].correct;
+  showOverlay(isCorrect);
+  if (isCorrect) {
     score++;
   }
   currentQuestionIndex++;
-  displayQuestion(currentQuestionIndex);
+  setTimeout(() => {
+    displayQuestion(currentQuestionIndex);
+  }, 2200); // Wait for animation to finish before displaying next question
 }
 
 function displayResult() {
@@ -170,4 +174,18 @@ function loadQuestions(N) {
       // Now you can start your quiz with the randomly selected questions
     })
     .catch((error) => console.error("Error loading questions:", error));
+}
+
+function showOverlay(isCorrect) {
+  const overlay = document.getElementById("overlay");
+  const tick = document.getElementById("tick");
+  const cross = document.getElementById("cross");
+
+  tick.style.display = isCorrect ? "block" : "none";
+  cross.style.display = isCorrect ? "none" : "block";
+
+  overlay.classList.add("active");
+  setTimeout(() => {
+    overlay.classList.remove("active");
+  }, 2000); // Overlay visible for 2 seconds
 }

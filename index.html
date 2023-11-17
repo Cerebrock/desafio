@@ -17,6 +17,19 @@
       </a>
     </header>
     <div class="quiz-container">
+      <div class="overlay" id="overlay">
+        <!-- Tick SVG -->
+        <svg id="tick" class="svg-icon" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+          <path class="path" d="M5 30 l15 15 l25 -25" stroke="green" stroke-width="4" fill="none" />
+        </svg>
+
+        <!-- Cross SVG -->
+        <svg id="cross" class="svg-icon" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+          <path class="path" d="M5 5 l40 40" stroke="red" stroke-width="4" fill="none" />
+          <path class="path" d="M45 5 l-40 40" stroke="red" stroke-width="4" fill="none" />
+        </svg>
+      </div>
+
       <div class="quiz-content">
         <h1>Meta<span class="alttext">Inteligencia</span></h1>
         <p id="welcome-message">
