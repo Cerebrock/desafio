@@ -15,9 +15,9 @@
     "correct": "VERDADERO"
   },
   {
-    "question": "En términos de adaptabilidad y aprendizaje, la cognición humana difiere significativamente de los modelos computacionales actuales porque los humanos pueden aprender de datos y experiencias no estructuradas.",
+    "question": "El aprendizaje humano humana difiere significativamente de los modelos computacionales actuales porque los humanos pueden aprender de experiencias y las computadoras no.",
     "options": ["VERDADERO", "FALSO"],
-    "correct": "VERDADERO"
+    "correct": "FALSO"
   },
   {
     "question": "El sesgo de confirmación se refiere a la tendencia de favorecer la información que confirma nuestras creencias o hipótesis preexistentes.",
@@ -108,5 +108,15 @@
     "question": "Seis huevos tardan seis minutos en cocinarse en agua hirviendo. ¿Cuánto tiempo tardarían en cocinarse doce huevos?",
     "options": ["6 minutos", "12 minutos", "18 minutos", "24 minutos"],
     "correct": "6 minutos"
+  },
+  {
+    "question": "Si hay 30 personas en una habitación, ¿cuál es la probabilidad de que al menos dos de ellas cumplan años el mismo día?",
+    "options": ["Menos del 50%", "Exactamente 50%", "Más del 50%", "83.3%"],
+    "correct": "Más del 50%"
+  },
+  {
+    "question": "¿Es cierto que la suma de tres números impares siempre resulta en un número impar?",
+    "options": ["VERDADERO", "FALSO"],
+    "correct": "VERDADERO"
   }
 ]
