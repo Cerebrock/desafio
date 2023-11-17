@@ -15,37 +15,12 @@
     "correct": "VERDADERO"
   },
   {
-    "question": "En el contexto del aprendizaje y la memoria, la RAM (Memoria de Acceso Aleatorio) se compara mejor con la memoria a largo plazo humana.",
-    "options": ["VERDADERO", "FALSO"],
-    "correct": "FALSO"
-  },
-  {
-    "question": "En la cognición humana, el proceso similar al algoritmo de una computadora en la resolución de problemas es la percepción sensorial.",
-    "options": ["VERDADERO", "FALSO"],
-    "correct": "FALSO"
-  },
-  {
     "question": "En términos de adaptabilidad y aprendizaje, la cognición humana difiere significativamente de los modelos computacionales actuales porque los humanos pueden aprender de datos y experiencias no estructuradas.",
     "options": ["VERDADERO", "FALSO"],
     "correct": "VERDADERO"
   },
   {
-    "question": "El equivalente de la 'secuencia de arranque' de una computadora en la cognición humana es el proceso de envejecimiento.",
-    "options": ["VERDADERO", "FALSO"],
-    "correct": "FALSO"
-  },
-  {
     "question": "El sesgo de confirmación se refiere a la tendencia de favorecer la información que confirma nuestras creencias o hipótesis preexistentes.",
-    "options": ["VERDADERO", "FALSO"],
-    "correct": "VERDADERO"
-  },
-  {
-    "question": "Los sesgos cognitivos de recencia y primacia describen la tendencia a recordar mejor la primera y última parte de una lista o secuencia.",
-    "options": ["VERDADERO", "FALSO"],
-    "correct": "VERDADERO"
-  },
-  {
-    "question": "El Efecto Dunning-Kruger describe la tendencia de las personas a sobreestimar su capacidad en áreas donde son incompetentes, mientras subestiman su competencia en áreas donde son expertas.",
     "options": ["VERDADERO", "FALSO"],
     "correct": "VERDADERO"
   },
@@ -55,32 +30,17 @@
     "correct": "FALSO"
   },
   {
-    "question": "Al igual que una computadora necesita reiniciarse a veces, el sueño es esencial para el funcionamiento óptimo del cerebro humano.",
-    "options": ["VERDADERO", "FALSO"],
-    "correct": "VERDADERO"
-  },
-  {
     "question": "Las computadoras pueden aprender y adaptarse de la misma manera que lo hace un cerebro humano.",
     "options": ["VERDADERO", "FALSO"],
     "correct": "FALSO"
   },
   {
-    "question": "Al igual que una computadora, el cerebro humano puede funcionar eficientemente sin descanso o sueño.",
+    "question": "Los seres humanos en general usan menos del 10% de su cerebro.",
     "options": ["VERDADERO", "FALSO"],
     "correct": "FALSO"
   },
   {
-    "question": "Los seres humanos usan menos del 10% de su cerebro.",
-    "options": ["VERDADERO", "FALSO"],
-    "correct": "FALSO"
-  },
-  {
-    "question": "Las emociones humanas pueden ser completamente entendidas y replicadas por las computadoras.",
-    "options": ["VERDADERO", "FALSO"],
-    "correct": "FALSO"
-  },
-  {
-    "question": "El cerebro humano es capaz de realizar varias tareas complejas al mismo tiempo sin disminuir su eficiencia.",
+    "question": "Las emociones humanas pueden ser entendidas por las computadoras.",
     "options": ["VERDADERO", "FALSO"],
     "correct": "FALSO"
   },
@@ -93,5 +53,35 @@
     "question": "La memoria humana funciona como una cámara, capturando y recordando eventos exactamente como sucedieron.",
     "options": ["VERDADERO", "FALSO"],
     "correct": "FALSO"
+  },
+  {
+    "question": "¿Es verdad que el cuadrado de cualquier número par siempre resulta en un número par?",
+    "options": ["VERDADERO", "FALSO"],
+    "correct": "VERDADERO"
+  },
+  {
+    "question": "¿Qué número es mayor, el 20% de 30 o el 30% de 20?",
+    "options": ["20% de 30", "30% de 20", "Ambos son iguales"],
+    "correct": "Ambos son iguales"
+  },
+  {
+    "question": "Si 5 personas tardan 5 minutos en hacer 5 cartas, ¿cuánto tiempo tardarán 100 personas en hacer 100 cartas?",
+    "options": ["5 minutos", "100 minutos", "20 minutos", "1 minuto"],
+    "correct": "5 minutos"
+  },
+  {
+    "question": "Si un pez pesa 1 kg más la mitad de su peso, ¿cuánto pesa el pez?",
+    "options": ["1 kg", "2 kg", "3 kg", "4 kg"],
+    "correct": "2 kg"
+  },
+  {
+    "puzzle": "Si lanzas un dado de seis caras, ¿cuál es la probabilidad de sacar un número mayor que 4?",
+    "options": ["1/6", "1/3", "1/2", "2/3"],
+    "answer": "1/3"
+  },
+  {
+    "puzzle": "Lanzas una moneda tres veces. ¿Cuál es la probabilidad de obtener exactamente dos caras?",
+    "options": ["1/4", "3/8", "1/2", "3/4"],
+    "answer": "3/8"
   }
 ]
