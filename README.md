@@ -1,5 +1,3 @@
-- Campo libre al final, dejanos tus comentarios
-- Mejorar preguntas
 - Agregar pixel
 - Podría mandarte el cupón por mail fácilmente
 - Agregar redes, invitar a discord?

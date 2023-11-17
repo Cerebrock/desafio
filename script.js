@@ -1,4 +1,4 @@
-const nQuestions = 5;
+const nQuestions = 1;
 let currentQuestionIndex = 0;
 let score = 0;
 let userName = "";
@@ -89,7 +89,7 @@ function answerQuestion(selectedOption) {
 
 function displayResult() {
   const resultDiv = document.getElementById("result");
-  const seeMoreButton = document.getElementById("see-more-btn"); // Ensure you have the correct ID for your redirect button
+  const restartButton = document.getElementById("restart"); // Ensure you have the correct ID for your redirect button
   const redirectButton = document.getElementById("redirect-button"); // Ensure you have the correct ID for your redirect button
   const totalQuestions = questions.length;
   const threshold = Math.ceil(totalQuestions * 0.6);
@@ -104,11 +104,11 @@ function displayResult() {
                              <p style='text-align:center;'>¡Podés usarlo para aplicar a la membresía o cualquiera de nuestros cursos con un <b>40% de descuento!</b></div>                             
                            </div>`;
     redirectButton.style.display = "block"; // Show the redirect button only if score is above threshold
+    restartButton.style.display = "none";
   } else {
     resultDiv.innerHTML = `<div class="failure-message">${failureMessage}</div>`;
-    redirectButton.style.display = "none"; // Hide the redirect button
+    restartButton.style.display = "block";
   }
-  seeMoreButton.style.display = "block";
   resultDiv.style.display = "block";
 }
 

@@ -120,7 +120,6 @@ input[type="email"] {
 button {
   font-size: 0.8em;
 }
-#next-btn,
 #welcome-screen button {
   background-color: #8662b3;
   color: #ffffff;
@@ -133,14 +132,10 @@ button {
   z-index: 100;
 }
 
-#next-btn:hover,
 #welcome-screen button:hover {
   background-color: #e5891f;
 }
 
-#next-brn {
-  font-size: larger;
-}
 #progress-bar {
   background-color: #ddd;
   border-radius: 20px;
