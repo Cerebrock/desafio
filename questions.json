@@ -75,12 +75,12 @@
     "correct": "2 kg"
   },
   {
-    "puzzle": "Si lanzas un dado de seis caras, ¿cuál es la probabilidad de sacar un número mayor que 4?",
+    "question": "Si lanzas un dado de seis caras, ¿cuál es la probabilidad de sacar un número mayor que 4?",
     "options": ["1/6", "1/3", "1/2", "2/3"],
     "answer": "1/3"
   },
   {
-    "puzzle": "Lanzas una moneda tres veces. ¿Cuál es la probabilidad de obtener exactamente dos caras?",
+    "question": "Lanzas una moneda tres veces. ¿Cuál es la probabilidad de obtener exactamente dos caras?",
     "options": ["1/4", "3/8", "1/2", "3/4"],
     "answer": "3/8"
   }
