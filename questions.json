@@ -83,5 +83,35 @@
     "question": "Lanzas una moneda tres veces. ¿Cuál es la probabilidad de obtener exactamente dos caras?",
     "options": ["1/4", "3/8", "1/2", "3/4"],
     "answer": "3/8"
+  },
+  {
+    "question": "Un píxel en una imagen digital puede ser considerado un equivalente a una 'neurona' en el cerebro humano.",
+    "options": ["VERDADERO", "FALSO"],
+    "correct": "FALSO"
+  },
+  {
+    "question": "¿Qué pesa más: un kilo de cables de cobre o un kilo de hilos para costura?",
+    "options": [
+      "Un kilo de cables",
+      "Un kilo de hilos",
+      "Pesan lo mismo",
+      "Depende de la gravedad"
+    ],
+    "correct": "Pesan lo mismo"
+  },
+  {
+    "question": "Una botella y un corcho cuestan $1.10 en total. La botella cuesta $1 más que el corcho. ¿Cuánto cuesta el corcho?",
+    "options": ["$0.05", "$0.10", "$0.15", "$1.00"],
+    "correct": "$0.10"
+  },
+  {
+    "question": "En un estanque, hay un lirio que duplica su tamaño cada día. Si tarda 60 días en cubrir todo el estanque, ¿en cuánto tiempo cubrirá la mitad del estanque?",
+    "options": ["30 días", "59 días", "58 días", "29 días"],
+    "correct": "59 días"
+  },
+  {
+    "question": "Seis huevos tardan seis minutos en cocinarse en agua hirviendo. ¿Cuánto tiempo tardarían en cocinarse doce huevos?",
+    "options": ["6 minutos", "12 minutos", "18 minutos", "24 minutos"],
+    "correct": "6 minutos"
   }
 ]
