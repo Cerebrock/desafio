@@ -40,9 +40,9 @@
     "correct": "FALSO"
   },
   {
-    "question": "Las emociones humanas pueden ser entendidas por las computadoras.",
+    "question": "Muchas emociones humanas pueden ser entendidas por las computadoras.",
     "options": ["VERDADERO", "FALSO"],
-    "correct": "FALSO"
+    "correct": "VERDADERO"
   },
   {
     "question": "Las decisiones humanas están siempre basadas en lógica y razón, al igual que las decisiones de una computadora.",
