@@ -1,4 +1,4 @@
-const nQuestions = 5;
+const nQuestions = 7;
 let currentQuestionIndex = 0;
 let score = 0;
 let userName = "";
@@ -94,29 +94,47 @@ function answerQuestion(selectedOption) {
     displayQuestion(currentQuestionIndex);
   }, 2200); // Wait for animation to finish before displaying next question
 }
-
 function displayResult() {
   const resultDiv = document.getElementById("result");
-  const restartButton = document.getElementById("restart"); // Ensure you have the correct ID for your redirect button
-  const redirectButton = document.getElementById("redirect-button"); // Ensure you have the correct ID for your redirect button
-  const totalQuestions = questions.length;
-  const threshold = Math.ceil(totalQuestions * 0.6);
-  const successMessage = `<b>¡Felicitaciones!</b></br></br>Tu puntaje fue de <b>${score}/${totalQuestions}</b></br></br><b>Tu cupón es </b></br><br>`;
-  const failureMessage = `Tu puntaje fue de ${score} sobre ${totalQuestions} correctas.</br></br>Intentalo nuevamente`;
-  const couponCode = "D-SAFIA-T"; // Example coupon code
+  const restartButton = document.getElementById("restart");
+  const redirectButton = document.getElementById("redirect-button");
 
-  if (score >= threshold) {
+  const totalQuestions = questions.length;
+  const scorePercentage = (score / totalQuestions) * 100;
+
+  const discounts = {
+    top: { threshold: 100, discount: 40, couponCode: "DESAFI4" },
+    medium: { threshold: 80, discount: 30, couponCode: "DESAFIA3" },
+    lower: { threshold: 50, discount: 10, couponCode: "DESAF10" },
+    none: { threshold: 30, discount: 0, couponCode: "" },
+  };
+
+  let appliedDiscount = discounts.none;
+  if (scorePercentage >= discounts.top.threshold) {
+    appliedDiscount = discounts.top;
+  } else if (scorePercentage >= discounts.medium.threshold) {
+    appliedDiscount = discounts.medium;
+  } else if (scorePercentage >= discounts.lower.threshold) {
+    appliedDiscount = discounts.lower;
+  }
+
+  const successMessage = `<b>¡Felicitaciones!</b></br></br>Tu puntaje fue de <b>${score}/${totalQuestions}</b> (${scorePercentage.toFixed(
+    2
+  )}%).</br></br><b>Tu cupón es: ${appliedDiscount.couponCode}</b></br><br>`;
+  const failureMessage = `Tu puntaje fue de ${score} sobre ${totalQuestions} correctas. Intentalo nuevamente.`;
+
+  if (scorePercentage >= discounts.none.threshold) {
     resultDiv.innerHTML = `<div class="winner-message">
                              ${successMessage}
-                             <div class="coupon">${couponCode}</div>
-                             <p style='text-align:center;'>¡Podés usarlo para aplicar a la membresía o cualquiera de nuestros cursos con un <b>40% de descuento!</b></div>                             
+                             <p style='text-align:center;'>¡Podés usarlo para aplicar a la membresía o cualquiera de nuestros cursos con un <b>${appliedDiscount.discount}% de descuento!</b></p>                             
                            </div>`;
-    redirectButton.style.display = "block"; // Show the redirect button only if score is above threshold
+    redirectButton.style.display = "block";
     restartButton.style.display = "none";
   } else {
     resultDiv.innerHTML = `<div class="failure-message">${failureMessage}</div>`;
     restartButton.style.display = "block";
   }
+
   resultDiv.style.display = "block";
 }
 
