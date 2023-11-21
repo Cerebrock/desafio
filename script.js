@@ -120,7 +120,9 @@ function displayResult() {
 
   const successMessage = `<b>¡Felicitaciones!</b></br></br>Tu puntaje fue de <b>${score}/${totalQuestions}</b> (${scorePercentage.toFixed(
     2
-  )}%).</br></br><b>Tu cupón es: ${appliedDiscount.couponCode}</b></br><br>`;
+  )}%).</br></br><b>Ganaste el cupón: ${
+    appliedDiscount.couponCode
+  }</b></br><br>`;
   const failureMessage = `Tu puntaje fue de ${score} sobre ${totalQuestions} correctas. Intentalo nuevamente.`;
 
   if (scorePercentage >= discounts.none.threshold) {

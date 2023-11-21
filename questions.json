@@ -72,12 +72,12 @@
   {
     "question": "Si lanzas un dado de seis caras, ¿cuál es la probabilidad de sacar un número mayor que 4?",
     "options": ["1/6", "1/3", "1/2", "2/3"],
-    "answer": "1/3"
+    "correct": "1/3"
   },
   {
     "question": "Lanzas una moneda tres veces. ¿Cuál es la probabilidad de obtener exactamente dos caras?",
     "options": ["1/4", "1/2", "3/8", "3/4"],
-    "answer": "3/8"
+    "correct": "3/8"
   },
   {
     "question": "Un píxel en una imagen digital puede ser considerado un equivalente a una 'neurona' en el cerebro humano.",
