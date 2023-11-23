@@ -222,5 +222,110 @@
     "question": "La Prueba de Turing está diseñada para evaluar la capacidad de una máquina para exhibir inteligencia similar a la humana.",
     "options": ["Verdadero", "Falso"],
     "correct": "Verdadero"
+  },
+  {
+    "question": "¿Qué afirmación es correcta sobre las 'redes neuronales' en inteligencia artificial?",
+    "options": [
+      "Imitan el proceso de pensamiento humano con precisión.",
+      "Son sistemas que aprenden y mejoran a partir de datos sin ser programados explícitamente",
+      "No pueden procesar grandes cantidades de datos",
+      "Son menos efectivas que los algoritmos tradicionales en la mayoría de las tareas"
+    ],
+    "correct": "Son sistemas que aprenden y mejoran a partir de datos sin ser programados explícitamente"
+  },
+  {
+    "question": "¿Cuál es un ejemplo de inteligencia espacial?",
+    "options": [
+      "Resolver un rompecabezas complejo",
+      "Componer una pieza musical",
+      "Debatir en un tema filosófico",
+      "Memorizar un poema"
+    ],
+    "correct": "Resolver un rompecabezas complejo"
+  },
+  {
+    "question": "¿Cuál es un ejemplo de inteligencia espacial?",
+    "options": [
+      "Resolver un rompecabezas complejo",
+      "Componer una pieza musical",
+      "Debatir en un tema filosófico",
+      "Memorizar un poema"
+    ],
+    "correct": "Resolver un rompecabezas complejo"
+  },
+  {
+    "question": "Un faro parpadea cada 10 segundos. ¿Cuántas veces parpadeará en una hora?",
+    "options": ["360", "240", "60", "3600"],
+    "correct": "360"
+  },
+  {
+    "question": "¿Cuál de estas afirmaciones sobre un agujero negro es verdadera?",
+    "options": [
+      "Es completamente vacío",
+      "Emite una fuerte luz visible",
+      "Tiene una gravedad tan fuerte que ni siquiera la luz puede escapar",
+      "Es una fuente de energía infinita"
+    ],
+    "correct": "Tiene una gravedad tan fuerte que ni siquiera la luz puede escapar"
+  },
+  {
+    "question": "¿Cuál es la velocidad aproximada de la luz en el vacío?",
+    "options": [
+      "300.000 kilómetros por segundo",
+      "150.000 kilómetros por segundo",
+      "1.000.000 kilómetros por hora",
+      "300.000 metros por segundo"
+    ],
+    "correct": "300.000 kilómetros por segundo"
+  },
+  {
+    "question": "Entender o conocer el mundo mediante la observación de eventos reales se llama",
+    "options": ["Tenacidad", "Racionalismo", "Empirismo", "Intuición"],
+    "correct": "Empirismo"
+  },
+  {
+    "question": "¿Alrededor de cuándo surgió la ciencia moderna?",
+    "options": [
+      "El siglo XX",
+      "Los siglos XV y XVI",
+      "Los siglos XVII y XVIII",
+      "Los siglos XVIII y XIX"
+    ],
+    "correct": "Los siglos XVII y XVIII"
+  },
+  {
+    "question": "Según tu texto, ¿cuál es la 'esencia' de la ciencia?",
+    "options": [
+      "Los hechos",
+      "El hardware",
+      "Su forma de pensar",
+      "Sus teorías"
+    ],
+    "correct": "Su forma de pensar"
+  },
+  {
+    "question": "¿Cuál es el desierto más grande del mundo?",
+    "options": ["Sahara", "Gobi", "Antártica", "Kalahari"],
+    "correct": "Antártica"
+  },
+  {
+    "question": "¿Cómo se llama un material que no conduce una carga eléctrica?",
+    "options": ["Conductor", "Semiconductor", "Aislante", "Resistor"],
+    "correct": "Aislante"
+  },
+  {
+    "question": "¿Aproximadamente cuánto tiempo tarda en llegar la luz del sol a la Tierra?",
+    "options": ["8 segundos", "8 minutos", "8 horas", "8 días"],
+    "correct": "8 minutos"
+  },
+  {
+    "question": "Al agua caliente se congela más rápido que el agua fría.",
+    "options": ["VERDADERO", "FALSO"],
+    "correct": "VERDADERO"
+  },
+  {
+    "question": "¿Cuántos dientes tiene un humano adulto?",
+    "options": ["28", "30", "32", "34"],
+    "correct": "32"
   }
 ]
