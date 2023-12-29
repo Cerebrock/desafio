@@ -1,4 +1,4 @@
-const nQuestions = 7;
+const nQuestions = 1;
 let currentQuestionIndex = 0;
 let score = 0;
 let userName = "";
@@ -98,6 +98,7 @@ function displayResult() {
   const resultDiv = document.getElementById("result");
   const restartButton = document.getElementById("restart");
   const redirectButton = document.getElementById("redirect-button");
+  const disclaimer = document.getElementById("disclaimer");
 
   const totalQuestions = questions.length;
   const scorePercentage = (score / totalQuestions) * 100;
@@ -120,18 +121,22 @@ function displayResult() {
 
   const successMessage = `<b>¡Felicitaciones!</b></br></br>Tu puntaje fue de <b>${score}/${totalQuestions}</b> (${scorePercentage.toFixed(
     2
-  )}%).</br></br><b>Ganaste el cupón: ${
-    appliedDiscount.couponCode
-  }</b></br><br>`;
+  )}%).</br></br><b>Ganaste el cupón 
+  <div class='coupon'>
+  ${appliedDiscount.couponCode}
+  </div>
+  </b></br><br>`;
   const failureMessage = `Tu puntaje fue de ${score} sobre ${totalQuestions} correctas. Intentalo nuevamente.`;
 
   if (scorePercentage >= discounts.none.threshold) {
     resultDiv.innerHTML = `<div class="winner-message">
                              ${successMessage}
-                             <p style='text-align:center;'>¡Podés usarlo para aplicar a la membresía o cualquiera de nuestros cursos con un <b>${appliedDiscount.discount}% de descuento!</b></p>                             
-                           </div>`;
+                             <p style='text-align:center; margin-top:0px'>¡Podés usarlo para aplicar a la membresía o cualquiera de nuestros cursos con un <b>${appliedDiscount.discount}% de descuento!</b></p>                             
+                             </div>`;
+    redirectButton.href = `https://humai.com.ar/sumate?coupon=${appliedDiscount.couponCode}`;
     redirectButton.style.display = "block";
     restartButton.style.display = "none";
+    disclaimer.style.display = "block";
   } else {
     resultDiv.innerHTML = `<div class="failure-message">${failureMessage}</div>`;
     restartButton.style.display = "block";
