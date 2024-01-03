@@ -1,4 +1,4 @@
-const nQuestions = 10;
+const nQuestions = 1;
 let currentQuestionIndex = 0;
 let score = 0;
 let userName = "";
@@ -118,7 +118,6 @@ function displayResult() {
   } else if (scorePercentage >= discounts.lower.threshold) {
     appliedDiscount = discounts.lower;
   }
-
   const successMessage = `<b>¡Felicitaciones!</b></br></br>Tu puntaje fue de <b>${score}/${totalQuestions}</b> (${scorePercentage.toFixed(
     2
   )}%).</br></br><b>Ganaste el cupón 
@@ -128,10 +127,13 @@ function displayResult() {
   </b></br><br>`;
   const failureMessage = `Tu puntaje fue de ${score} sobre ${totalQuestions} correctas. Intentalo nuevamente.`;
 
+  const additionalMessage = `<p>¡Aprendé a hacer prototipos de aplicaciones basadas en IA rápidamente!</p>`;
+
   if (scorePercentage >= discounts.none.threshold) {
     resultDiv.innerHTML = `<div class="winner-message">
                              ${successMessage}
-                             <p style='text-align:center; margin-top:0px'>¡Podés usarlo para aplicar a la membresía o cualquiera de nuestros cursos con un <b>${appliedDiscount.discount}% de descuento!</b></p>                             
+                             <p style='text-align:center; margin-top:0px'>¡Podés usarlo para tener un <b>${appliedDiscount.discount}% de descuento en con todos nuestros Cursos y Carreras!</b></p>                             
+                             ${additionalMessage}
                              </div>`;
     redirectButton.href = `https://humai.com.ar/sumate?coupon=${appliedDiscount.couponCode}`;
     redirectButton.style.display = "block";
