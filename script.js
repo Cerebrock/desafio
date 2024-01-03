@@ -1,4 +1,4 @@
-const nQuestions = 1;
+const nQuestions = 10;
 let currentQuestionIndex = 0;
 let score = 0;
 let userName = "";
