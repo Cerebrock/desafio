@@ -351,3 +351,36 @@ footer {
     stroke-dashoffset: 0;
   }
 }
+.social-sidebar {
+  position: fixed;
+  right: 2%;
+  top: 20%;
+  bottom: 20%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  z-index: 50;
+}
+
+.social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+  background-color: #313131;
+  opacity: 0.8;
+  transition: opacity 0.3s;
+  color: white; /* Add text color for icons */
+  text-decoration: none; /* Remove underline from links */
+}
+
+.social-link:hover {
+  opacity: 1;
+}
+
+.social-link i {
+  font-size: 20px; /* Adjust icon size */
+}
