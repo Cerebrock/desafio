@@ -47,9 +47,9 @@ function displayQuestion(index) {
 
       // Apply color based on button text
       if (option === "VERDADERO") {
-        answerButton.style.backgroundColor = "green";
+        answerButton.style.backgroundColor = "#265926";
       } else if (option === "FALSO") {
-        answerButton.style.backgroundColor = "red";
+        answerButton.style.backgroundColor = "#b44a4a";
       }
 
       questionDiv.appendChild(answerButton);

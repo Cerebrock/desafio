@@ -10,6 +10,24 @@ html {
   min-height: 100vh; /* Ensure the body takes at least the viewport height */
 }
 
+:root {
+  --tick-color: #265926; /* Default color for tick */
+  --cross-color: #b44a4a; /* Default color for cross */
+}
+
+.svg-icon .path {
+  stroke-width: 4;
+  fill: none;
+}
+
+#tick .path {
+  stroke: var(--tick-color);
+}
+
+#cross .path {
+  stroke: var(--cross-color);
+}
+
 button {
   background-color: #8662b3; /* Theme color */
   color: #ffffff;
