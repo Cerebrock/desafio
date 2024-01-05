@@ -4,6 +4,13 @@ let score = 0;
 let userName = "";
 let userEmail = "";
 
+const discounts = {
+  top: { threshold: 100, discount: 35, couponCode: "DESAFI4T3" },
+  medium: { threshold: 80, discount: 20, couponCode: "DESAFIA2" },
+  lower: { threshold: 50, discount: 10, couponCode: "DESAF10" },
+  none: { threshold: 30, discount: 0, couponCode: "" },
+};
+
 document.getElementById("n-questions").innerHTML = nQuestions + " preguntas";
 
 function startQuiz() {
@@ -102,13 +109,6 @@ function displayResult() {
 
   const totalQuestions = questions.length;
   const scorePercentage = (score / totalQuestions) * 100;
-
-  const discounts = {
-    top: { threshold: 100, discount: 40, couponCode: "DESAFI4" },
-    medium: { threshold: 80, discount: 30, couponCode: "DESAFIA3" },
-    lower: { threshold: 50, discount: 10, couponCode: "DESAF10" },
-    none: { threshold: 30, discount: 0, couponCode: "" },
-  };
 
   let appliedDiscount = discounts.none;
   if (scorePercentage >= discounts.top.threshold) {
