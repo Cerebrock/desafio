@@ -129,7 +129,7 @@ function displayResult() {
 
   const additionalMessage = `<p>¡Aprendé a hacer prototipos de aplicaciones basadas en IA rápidamente!</p>`;
 
-  if (scorePercentage >= discounts.none.threshold) {
+  if (scorePercentage >= discounts.lower.threshold) {
     resultDiv.innerHTML = `<div class="winner-message">
                              ${successMessage}
                              <p style='text-align:center; margin-top:0px'>¡Podés usarlo para tener un <b>${appliedDiscount.discount}% de descuento en con todos nuestros Cursos y Carreras!</b></p>                             
