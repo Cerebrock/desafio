@@ -170,6 +170,19 @@ function sendData() {
   const email = document.getElementById("email").value;
   const timestamp = new Date().toISOString(); // Get current timestamp in ISO format
 
+  // Calculate discount for this user (same logic as in displayResult)
+  const totalQuestiofixns = questions.length;
+  const scorePercentage = (score / totalQuestions) * 100;
+  
+  let appliedDiscount = discounts.none;
+  if (scorePercentage >= discounts.top.threshold) {
+    appliedDiscount = discounts.top;
+  } else if (scorePercentage >= discounts.medium.threshold) {
+    appliedDiscount = discounts.medium;
+  } else if (scorePercentage >= discounts.lower.threshold) {
+    appliedDiscount = discounts.lower;
+  }
+
   // Send to Google Sheets (existing functionality)
   fetch(BACKEND_URL, {
     method: "POST",
@@ -205,7 +218,7 @@ function sendData() {
         bucket_file_path: bucketFilePath,
         quiz_completed: true,
         total_questions: questions.length,
-        percentage: ((score / questions.length) * 100).toFixed(2)
+        percentage: scorePercentage.toFixed(2)
       }
     }),
   })
