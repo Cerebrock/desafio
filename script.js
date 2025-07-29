@@ -162,11 +162,15 @@ window.onload = () => {
 const BACKEND_URL =
   "https://script.google.com/macros/s/AKfycbyQT-6glmz951i4jGUH_IgyZSbS-uUt7nuXO5m5mlf3d6vDh-v-C_K3Nvp0bvWri5Xj/exec";
 
+const LEADS_ENDPOINT = 
+  "https://backend-server-service-184206632678.us-central1.run.app/leads";
+
 function sendData() {
   const name = document.getElementById("name").value;
   const email = document.getElementById("email").value;
   const timestamp = new Date().toISOString(); // Get current timestamp in ISO format
 
+  // Send to Google Sheets (existing functionality)
   fetch(BACKEND_URL, {
     method: "POST",
     contentType: "application/json",
@@ -178,8 +182,36 @@ function sendData() {
     }),
   })
     .then((response) => response.json())
-    .then((data) => console.log(data))
-    .catch((error) => console.error("Error:", error));
+    .then((data) => console.log("Google Sheets response:", data))
+    .catch((error) => console.error("Google Sheets error:", error));
+
+  // Send to leads endpoint
+  const bucketFilePath = window.location.pathname || "/index.html";
+  
+  fetch(LEADS_ENDPOINT, {
+    method: "POST",
+    headers: {
+      "accept": "application/json",
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify({
+      email: email,
+      source: "desafio",
+      lead_date: timestamp,
+      extra_data: {
+        name: name,
+        score: score,
+        coupon_code: appliedDiscount.couponCode,
+        bucket_file_path: bucketFilePath,
+        quiz_completed: true,
+        total_questions: questions.length,
+        percentage: ((score / questions.length) * 100).toFixed(2)
+      }
+    }),
+  })
+    .then((response) => response.json())
+    .then((data) => console.log("Leads endpoint response:", data))
+    .catch((error) => console.error("Leads endpoint error:", error));
 }
 
 function validateData(name, email) {
