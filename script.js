@@ -171,7 +171,7 @@ function sendData() {
   const timestamp = new Date().toISOString(); // Get current timestamp in ISO format
 
   // Calculate discount for this user (same logic as in displayResult)
-  const totalQuestiofixns = questions.length;
+  const totalQuestions = questions.length;
   const scorePercentage = (score / totalQuestions) * 100;
   
   let appliedDiscount = discounts.none;
