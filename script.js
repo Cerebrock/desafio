@@ -5,9 +5,9 @@ let userName = "";
 let userEmail = "";
 
 const discounts = {
-  top: { threshold: 100, discount: 35, couponCode: "DESAFI4T3" },
-  medium: { threshold: 80, discount: 20, couponCode: "DESAFIA2" },
-  lower: { threshold: 50, discount: 10, couponCode: "DESAF10" },
+  top: { threshold: 100, discount: 40, couponCode: "DESAFI4" },
+  medium: { threshold: 80, discount: 35, couponCode: "DESAFI4T3" },
+  lower: { threshold: 50, discount: 20, couponCode: "DESAFIA2" },
   none: { threshold: 30, discount: 0, couponCode: "" },
 };
 
