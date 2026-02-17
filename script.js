@@ -135,7 +135,10 @@ function displayResult() {
                              <p style='text-align:center; margin-top:0px'>¡Podés usarlo para tener un <b>${appliedDiscount.discount}% de descuento en con todos nuestros Cursos y Carreras!</b></p>                             
                              ${additionalMessage}
                              </div>`;
-    redirectButton.href = `https://humai.com.ar/sumate?coupon_code=${appliedDiscount.couponCode}`;
+    // redirectButton is a <button>, not an <a>. Use an explicit click handler.
+    redirectButton.onclick = () => {
+      window.location.href = `https://humai.com.ar/sumate?coupon_code=${appliedDiscount.couponCode}`;
+    };
     redirectButton.style.display = "block";
     restartButton.style.display = "none";
     disclaimer.style.display = "block";
